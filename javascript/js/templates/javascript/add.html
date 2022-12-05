@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding two elements</title>
+</head>
+<body>
+    <h1 id="heading">Addition</h1>
+    <input type="text" id="text1">
+    <input type="text" id="text2">
+    <button onclick="result()">result</button>
+    <input type="text" id="text3">
+    <script>
+        function result(){
+            a=document.getElementById('text1').value
+            b=document.getElementById('text2').value
+            a=parseInt(a)
+            b=parseInt(b)
+            document.getElementById('text3').value=a+b
+            document.getElementById('text2').disabled=false
+        }
+    </script>
+</body>
+</html>

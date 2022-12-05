@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second largest</title>
+</head>
+<body>
+    
+
+<!-- <script>  
+    var secondMax = function (){ 
+        var arr = [20, 120, 111, 215, 54, 78]; // use int arrays
+        var max = Math.max.apply(null, arr); // get the max of the array
+        arr.splice(arr.indexOf(max), 1); // remove max from the array
+        return Math.max.apply(null, arr); // get the 2nd max
+    };
+    
+    
+    var secondMax = function (arr){ 
+        var max = Math.max.apply(null, arr), // get the max of the array
+            maxi = arr.indexOf(max);
+        arr[maxi] = -Infinity; // replace max in the array with -infinity
+        var secondMax = Math.max.apply(null, arr); // get the new max 
+        arr[maxi] = max;
+        return secondMax;
+        
+    };
+
+</script>  -->
+
+
+<script>
+function secondLargest(arr) {
+
+    var max1st = arr[0];
+  
+    var max2nd = 0;
+  
+    
+    for(var i=0; i<arr.length; i++) {
+  
+      if(arr[i] > max1st) {
+  
+        max2nd = max1st;
+  
+        max1st = arr[i];
+  
+      }
+  
+      else if(arr[i] > max2nd && arr[i] !== max1st) {
+  
+        max2nd = arr[i];
+  
+      }
+  
+    }
+  
+    return max2nd;
+  
+  }
+  
+  
+  document.write(secondLargest([100,2,4,54,27,98,99]));
+</script>
+
+</body>
+</html>
